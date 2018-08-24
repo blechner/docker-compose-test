@@ -1,0 +1,12 @@
+version: '3'
+services:
+  public-dummy-container:
+    image: "blechner/dummy-container:1.0.0"
+    environment:
+      - WIOTP_DOMAIN="${WIOTP_DOMAIN}"
+    env_file:
+      - environment.env
+    volumes:
+      - ${EDGE_FILES}/config.json:/var/wiotp-edge/config.json
+      - ${EDGE_FILES}/test.conf:/var/wiotp-edge/test.conf
+

@@ -1,4 +1,0 @@
-version: '3'
-services:
- dummy-container:
-   image: "blechner/dummy-container:1.0.0"

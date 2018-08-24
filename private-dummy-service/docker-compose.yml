@@ -1,0 +1,11 @@
+version: '3'
+services:
+  private-dummy-container:
+    image: "registry.ng.bluemix.net/marcelo/dummy-container:latest"
+    environment:
+      - WIOTP_DOMAIN="${WIOTP_DOMAIN}"
+    env_file:
+      - environment.env
+    volumes:
+      - ${EDGE_FILES}/textfile.txt:/var/wiotp-edge/textfile.txt
+
